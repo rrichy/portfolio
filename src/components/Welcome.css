@@ -1,0 +1,117 @@
+#greet {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#greet text {
+  fill: #231f20;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 300;
+  stroke-width: 5;
+  cursor: default;
+  animation: waitClick 1s reverse infinite;
+}
+
+#greet .greet {
+  fill: transparent;
+  stroke: #fff;
+  font-size: 10rem;
+  font-weight: 400;
+  stroke-width: 5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  -webkit-animation: animateText 7s forwards, glow 1s ease-in-out infinite alternate;
+          animation: animateText 7s forwards, glow 1s ease-in-out infinite alternate;
+}
+
+#greet .hide {
+  fill: transparent;
+  stroke: #fff;
+  font-size: 10rem;
+  font-weight: 400;
+  stroke-width: 5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  -webkit-animation: hideText 1s, glow 1s ease-in-out infinite alternate;
+          animation: hideText 1s, glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes animateText {
+  0% {
+    stroke-dasharray: 0% 100%;
+  }
+  100% {
+    stroke-dasharray: 100% 0%;
+  }
+}
+
+@keyframes animateText {
+  0% {
+    stroke-dasharray: 0% 100%;
+  }
+  100% {
+    stroke-dasharray: 100% 0%;
+  }
+}
+
+@-webkit-keyframes hideText {
+  0% {
+    stroke-dasharray: 100% 0%;
+  }
+  100% {
+    stroke-dasharray: 0% 100%;
+  }
+}
+
+@keyframes hideText {
+  0% {
+    stroke-dasharray: 100% 0%;
+  }
+  100% {
+    stroke-dasharray: 0% 100%;
+  }
+}
+
+@-webkit-keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #bb4430, 0 0 40px #bb4430, 0 0 50px #bb4430, 0 0 60px #bb4430, 0 0 70px #bb4430;
+  }
+  100% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #588b8b, 0 0 40px #ffd5c2, 0 0 50px #588b8b, 0 0 60px #588b8b, 0 0 70px #588b8b, 0 0 80px #588b8b;
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #bb4430, 0 0 40px #bb4430, 0 0 50px #bb4430, 0 0 60px #bb4430, 0 0 70px #bb4430;
+  }
+  100% {
+    text-shadow: 0 0 20px #fff, 0 0 30px #588b8b, 0 0 40px #ffd5c2, 0 0 50px #588b8b, 0 0 60px #588b8b, 0 0 70px #588b8b, 0 0 80px #588b8b;
+  }
+}
+
+@-webkit-keyframes waitClick {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(3%);
+            transform: translateY(3%);
+  }
+}
+
+@keyframes waitClick {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  100% {
+    -webkit-transform: translateY(3%);
+            transform: translateY(3%);
+  }
+}
+/*# sourceMappingURL=Welcome.css.map */

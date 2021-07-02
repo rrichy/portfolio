@@ -1,0 +1,172 @@
+#navigation {
+  height: 100vh;
+  width: 31vh;
+  position: fixed;
+  right: 0%;
+  font-size: 3rem;
+  background: linear-gradient(94deg, transparent 0%, transparent 19.5%, #bb4430 20%);
+  color: #231f20;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+}
+
+#nav-wrapper {
+  position: absolute;
+  right: 0%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: right;
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+
+#nav-wrapper h1 {
+  margin: 0;
+  -webkit-text-decoration: underline solid 0.3rem;
+          text-decoration: underline solid 0.3rem;
+  font-size: 5vh;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+#nav-wrapper h1:hover {
+  color: #588b8b;
+  cursor: pointer;
+  font-style: italic;
+}
+
+#account-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+#account-wrapper .fa-github,
+#account-wrapper .fa-free-code-camp,
+#account-wrapper .fa-codepen {
+  margin: 0.5rem;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+#account-wrapper .fa-github:hover,
+#account-wrapper .fa-free-code-camp:hover,
+#account-wrapper .fa-codepen:hover {
+  color: #588b8b;
+  cursor: pointer;
+}
+
+.hidden {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+@media (max-width: 985px) {
+  #navigation {
+    height: 100vh;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.5rem;
+    left: 0;
+    background: #bb4430;
+  }
+  #nav-wrapper {
+    position: relative;
+    left: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: left;
+    padding: 0;
+  }
+  #nav-wrapper h1 {
+    text-orientation: sideways;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    text-decoration: none;
+    margin: 1.4rem 0;
+    font-size: 2.5rem;
+  }
+  #account-wrapper {
+    position: absolute;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 2rem;
+  }
+  #account-wrapper .fa-github,
+  #account-wrapper .fa-free-code-camp,
+  #account-wrapper .fa-codepen {
+    margin: 0.5rem;
+    font-size: 3rem;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+  }
+  #account-wrapper .fa-github:hover,
+  #account-wrapper .fa-free-code-camp:hover,
+  #account-wrapper .fa-codepen:hover {
+    color: #588b8b;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 375px) {
+  #navigation {
+    height: 100vh;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.2rem;
+    left: 0;
+    background: #bb4430;
+  }
+  #nav-wrapper {
+    position: relative;
+    left: 0;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: left;
+    padding: 0;
+  }
+  #nav-wrapper h1 {
+    text-orientation: sideways;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+    text-decoration: none;
+    margin: 1.4rem 0;
+    font-size: 1.8rem;
+  }
+  #account-wrapper .fa-github,
+  #account-wrapper .fa-free-code-camp,
+  #account-wrapper .fa-codepen {
+    margin: 0.5rem;
+    font-size: 2rem;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+  }
+  #account-wrapper .fa-github:hover,
+  #account-wrapper .fa-free-code-camp:hover,
+  #account-wrapper .fa-codepen:hover {
+    color: #588b8b;
+    cursor: pointer;
+  }
+}
+/*# sourceMappingURL=Navigation.css.map */

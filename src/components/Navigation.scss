@@ -1,0 +1,148 @@
+@import "../variables";
+
+#navigation {
+  height: 100vh;
+  width: 31vh;
+  position: fixed;
+  right: 0%;
+  font-size: 3rem;
+  background: linear-gradient(
+    94deg,
+    transparent 0%,
+    transparent 19.5%,
+    $accent1 20%
+  );
+  color: $textColor;
+  transition: transform 0.7s;
+}
+
+#nav-wrapper {
+  position: absolute;
+  right: 0%;
+  width: fit-content;
+  text-align: right;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  h1 {
+    margin: 0;
+    text-decoration: underline solid 0.3rem;
+    font-size: 5vh;
+    transition: color 0.2s;
+    &:hover {
+      color: $accent2;
+      cursor: pointer;
+      font-style: italic;
+    }
+  }
+}
+
+#account-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 2rem;
+  padding-bottom: 0.5rem;
+
+  .fa-github,
+  .fa-free-code-camp,
+  .fa-codepen {
+    margin: 0.5rem;
+    transition: color 0.2s;
+    &:hover {
+      color: $accent2;
+      cursor: pointer;
+    }
+  }
+}
+
+.hidden {
+  transform: translateX(100%);
+}
+
+@media (max-width: 985px) {
+  #navigation {
+    height: 100vh;
+    width: fit-content;
+    padding: 0.5rem;
+    left: 0;
+    background: $accent1;
+  }
+
+  #nav-wrapper {
+    position: relative;
+    left: 0;
+    width: fit-content;
+    text-align: left;
+    padding: 0;
+    h1 {
+      text-orientation: sideways;
+      writing-mode: vertical-rl;
+      text-decoration: none;
+
+      margin: 1.4rem 0;
+      font-size: 2.5rem;
+    }
+  }
+
+  #account-wrapper {
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .fa-github,
+    .fa-free-code-camp,
+    .fa-codepen {
+      margin: 0.5rem;
+      font-size: 3rem;
+      transition: color 0.2s;
+      &:hover {
+        color: $accent2;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  #navigation {
+    height: 100vh;
+    width: fit-content;
+    padding: 0.2rem;
+    left: 0;
+    background: $accent1;
+  }
+
+  #nav-wrapper {
+    position: relative;
+    left: 0;
+    width: fit-content;
+    text-align: left;
+    padding: 0;
+    h1 {
+      text-orientation: sideways;
+      writing-mode: vertical-rl;
+      text-decoration: none;
+
+      margin: 1.4rem 0;
+      font-size: 1.8rem;
+    }
+  }
+
+  #account-wrapper {
+    .fa-github,
+    .fa-free-code-camp,
+    .fa-codepen {
+      margin: 0.5rem;
+      font-size: 2rem;
+      transition: color 0.2s;
+      &:hover {
+        color: $accent2;
+        cursor: pointer;
+      }
+    }
+  }
+}
