@@ -80,7 +80,7 @@
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #bb4430, 0 0 40px #bb4430, 0 0 50px #bb4430, 0 0 60px #bb4430, 0 0 70px #bb4430;
   }
   100% {
-    text-shadow: 0 0 20px #fff, 0 0 30px #588b8b, 0 0 40px #ffd5c2, 0 0 50px #588b8b, 0 0 60px #588b8b, 0 0 70px #588b8b, 0 0 80px #588b8b;
+    text-shadow: 0 0 20px #fff, 0 0 30px #588b8b, 0 0 40px #84c318, 0 0 50px #588b8b, 0 0 60px #588b8b, 0 0 70px #588b8b, 0 0 80px #588b8b;
   }
 }
 
@@ -89,7 +89,7 @@
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #bb4430, 0 0 40px #bb4430, 0 0 50px #bb4430, 0 0 60px #bb4430, 0 0 70px #bb4430;
   }
   100% {
-    text-shadow: 0 0 20px #fff, 0 0 30px #588b8b, 0 0 40px #ffd5c2, 0 0 50px #588b8b, 0 0 60px #588b8b, 0 0 70px #588b8b, 0 0 80px #588b8b;
+    text-shadow: 0 0 20px #fff, 0 0 30px #588b8b, 0 0 40px #84c318, 0 0 50px #588b8b, 0 0 60px #588b8b, 0 0 70px #588b8b, 0 0 80px #588b8b;
   }
 }
 
@@ -112,6 +112,28 @@
   100% {
     -webkit-transform: translateY(3%);
             transform: translateY(3%);
+  }
+}
+
+@media (max-width: 985px) {
+  #greet .greet {
+    font-size: 13rem;
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  #greet text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  #greet .greet {
+    font-size: 16rem;
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  #greet text {
+    font-size: 3.5rem;
   }
 }
 /*# sourceMappingURL=Welcome.css.map */

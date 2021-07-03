@@ -10,6 +10,7 @@
   transition: -webkit-transform 0.7s;
   transition: transform 0.7s;
   transition: transform 0.7s, -webkit-transform 0.7s;
+  z-index: 20;
 }
 
 #nav-wrapper {
@@ -28,14 +29,17 @@
   -webkit-text-decoration: underline solid 0.3rem;
           text-decoration: underline solid 0.3rem;
   font-size: 5vh;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
+  -webkit-transition: color 0.2s, -webkit-transform 0.2s;
+  transition: color 0.2s, -webkit-transform 0.2s;
+  transition: color 0.2s, transform 0.2s;
+  transition: color 0.2s, transform 0.2s, -webkit-transform 0.2s;
 }
 
 #nav-wrapper h1:hover {
   color: #588b8b;
   cursor: pointer;
-  font-style: italic;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 #account-wrapper {
@@ -52,12 +56,15 @@
   margin: 0.5rem;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
+  font-size: 2.6rem;
 }
 
 #account-wrapper .fa-github:hover,
 #account-wrapper .fa-free-code-camp:hover,
 #account-wrapper .fa-codepen:hover {
   color: #588b8b;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   cursor: pointer;
 }
 
@@ -68,11 +75,10 @@
 
 @media (max-width: 985px) {
   #navigation {
-    height: 100vh;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    padding: 0.5rem;
+    padding: 0.2rem;
     left: 0;
     background: #bb4430;
   }
@@ -114,7 +120,7 @@
   #account-wrapper .fa-free-code-camp,
   #account-wrapper .fa-codepen {
     margin: 0.5rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
   }
@@ -124,18 +130,13 @@
     color: #588b8b;
     cursor: pointer;
   }
+  .hidden {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
 }
 
 @media (max-width: 375px) {
-  #navigation {
-    height: 100vh;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0.2rem;
-    left: 0;
-    background: #bb4430;
-  }
   #nav-wrapper {
     position: relative;
     left: 0;

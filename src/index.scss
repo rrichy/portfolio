@@ -11,13 +11,90 @@ body {
   font-family: "Oswald", sans-serif;
 }
 
-.container {
+.data-bg {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    94deg,
-    $bgColor2 0%,
-    $bgColor2 76.5%,
-    transparent 77%
-  );
+  // position: absolute;
+  // top: 50%;
+  // transform: translateY(-50%);
+  // background: radial-gradient(ellipse at 40%, transparent 30%, $bgColor2 55%);
+  // z-index: -10;
+}
+
+#home {
+  transform: translateX(100vw);
+  position: fixed;
+  width: calc(100% - 30vh);
+  background-color: firebrick;
+  // transition: transform 0.4s ease-in 0.2s;
+}
+
+.hide-home {
+  transform: translateX(0);
+  animation: showHome 2s ease 0.2s reverse forwards;
+}
+
+.show-home {
+  transform: translateX(100vw);
+  animation: showHome 2s ease 0.2s forwards;
+}
+
+@keyframes showHome {
+  0% {
+    transform: scale(1) translateX(100vw);
+  }
+  30% {
+    transform: scale(0.8, 1.2) translateX(-10vw);
+  }
+  50% {
+    transform: scale(1, 0.8) translateX(5vw);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+#data-home {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-size: 1.2em;
+    color: $accent1;
+  }
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.home-idle {
+  width: 100%;
+  height: 100vh;
+  circle {
+    fill: $bgColor1;
+    stroke: $accent1;
+    stroke-width: 7;
+    stroke-dasharray: 70 20;
+    stroke-linecap: round;
+    transform-origin: center;
+    animation: strokePlay 7s ease-in-out infinite alternate-reverse;
+  }
+}
+
+@keyframes strokePlay {
+  0% {
+    stroke-dasharray: 70 20;
+    stroke-dashoffset: 0;
+    transform: scale(1);
+  }
+  100% {
+    stroke-dasharray: 63 20;
+    stroke-dashoffset: 300;
+    transform: scale(1.1);
+  }
 }
