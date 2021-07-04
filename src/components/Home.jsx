@@ -1,8 +1,14 @@
-const Home = ({ show, page }) => {
+const Home = ({ page, initial }) => {
   return (
     <div
       id="home"
-      className={!show ? "" : page === "home" ? "show-home" : "hide-home"}
+      className={
+        initial
+          ? "show-home-initial"
+          : page === "home"
+          ? "show-home"
+          : "hide-home"
+      }
     >
       <div id="data-home">
         <h1>
