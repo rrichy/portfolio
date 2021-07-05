@@ -5,20 +5,15 @@ import {
   faCodepen,
 } from "@fortawesome/free-brands-svg-icons";
 
-import "./Navigation.css";
+import "./styles/css/Navigation.css";
 
-const Navigation = ({ show, change, nav }) => {
-  function changePage(page) {
-    change(page);
-    nav(false);
-  }
-
+const Navigation = ({ show, change }) => {
   return (
     <nav id="navigation" className={show ? "" : "hidden"}>
       <div id="nav-wrapper">
-        <h1 onClick={() => changePage("home")}>HOME</h1>
-        <h1 onClick={() => changePage("projects")}>PROJECTS</h1>
-        <h1 onClick={() => changePage("contact")}>CONTACT</h1>
+        <h1 onClick={() => change("home")}>HOME</h1>
+        <h1 onClick={() => change("projects")}>PROJECTS</h1>
+        <h1 onClick={() => change("contact")}>CONTACT</h1>
       </div>
       <div id="account-wrapper">
         <FontAwesomeIcon icon={faGithub} />

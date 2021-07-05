@@ -1,0 +1,98 @@
+@import "./variables";
+// home page
+
+#home {
+  transform: translateX(100vw);
+  position: fixed;
+  width: calc(100vw - 30vh);
+}
+
+.hide-home {
+  animation: hideHome 2s ease forwards;
+}
+
+.show-home {
+  animation: showHome 2s ease forwards;
+}
+
+.show-home-initial {
+  animation: showHome 2s ease forwards 0.4s;
+}
+
+@keyframes showHome {
+  0% {
+    transform: scale(1) translateX(100vw);
+  }
+  // 20% {
+  //   transform: scale(1);
+  // }
+  30% {
+    transform: scale(0.8, 1.2) translateX(-10vw);
+  }
+  50% {
+    transform: scale(1, 0.8) translateX(5vw);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes hideHome {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: scale(1) translateX(110vw);
+  }
+  30% {
+    transform: scale(0.8, 1.2) translateX(110vw);
+  }
+  100% {
+    transform: scale(1) translateX(100vw);
+  }
+}
+
+#data-home {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  span {
+    font-size: 1.2em;
+    color: $accent1;
+  }
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.home-idle {
+  width: 100%;
+  height: 100vh;
+  circle {
+    fill: $bgColor1;
+    stroke: $accent1;
+    stroke-width: 7;
+    stroke-dasharray: 70 20;
+    stroke-linecap: round;
+    transform-origin: center;
+    animation: strokePlay 7s ease-in-out infinite alternate-reverse;
+  }
+}
+
+@keyframes strokePlay {
+  0% {
+    stroke-dasharray: 70 20;
+    stroke-dashoffset: 0;
+    transform: scale(1);
+  }
+  100% {
+    stroke-dasharray: 63 20;
+    stroke-dashoffset: 300;
+    transform: scale(1.1);
+  }
+}

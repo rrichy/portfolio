@@ -1,0 +1,239 @@
+@import "./variables";
+
+#projects {
+  position: fixed;
+  height: 100vh;
+  width: calc(100vw - 30vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateX(100vw);
+}
+
+.show-projects {
+  animation: showProjects 2s ease forwards 0.2s;
+}
+
+.hide-projects {
+  animation: hideProjects 2s ease forwards;
+}
+
+@keyframes showProjects {
+  0% {
+    transform: translateX(100vw);
+  }
+  30% {
+    transform: translateX(-10vw);
+  }
+  50% {
+    transform: translateX(5vw);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes hideProjects {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(110vw);
+  }
+  30% {
+    transform: translateX(110vw);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
+h1 {
+  margin: 0 0 2rem 0;
+}
+
+#highlight-projects-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+
+.highlight-project {
+  height: 28vh;
+  width: 28vh;
+  margin: 0.5rem;
+  position: relative;
+
+  img {
+    height: 100%;
+    width: 100%;
+    transform: scale(0.98);
+  }
+
+  &__bracket {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s;
+  }
+
+  &:hover {
+    .highlight-project {
+      &__bracket {
+        background: $bgColor1;
+        transform: scale(1.08);
+      }
+
+      &__rect {
+        animation: bracketAnimation 5s infinite alternate;
+      }
+
+      &__info {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@keyframes bracketAnimation {
+  0% {
+    stroke-dashoffset: 136.22;
+  }
+  50% {
+    stroke-dashoffset: 186.22;
+  }
+  100% {
+    stroke-dashoffset: 76.22;
+  }
+}
+
+.highlight-project__rect {
+  fill: transparent;
+  stroke-width: 13;
+  stroke: $accent1;
+  stroke-dasharray: 272.44;
+  stroke-dashoffset: 136.22;
+}
+
+.highlight-project__info {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: $accent1;
+
+  transition: all 0.4s;
+}
+
+.highlight-project__icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 1.5rem;
+  transition: all 0.4s;
+  a {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background: $accent1;
+    color: $bgColor1-solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+}
+
+// media
+@media (max-width: 985px) {
+  #projects {
+    transform: translateX(-100vw);
+    left: 4.15rem;
+    top: 0;
+    margin-top: 2rem;
+    height: auto;
+    width: calc(100vw - 4.15rem);
+    position: absolute;
+  }
+
+  #highlight-projects-container {
+    flex-direction: column;
+  }
+
+  @keyframes showProjects {
+    0% {
+      transform: translateX(-100vw);
+    }
+    30% {
+      transform: translateX(10vw);
+    }
+    50% {
+      transform: translateX(-5vw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes hideProjects {
+    0% {
+      transform: translateX(0);
+    }
+    30% {
+      transform: translateX(-110vw);
+    }
+    100% {
+      transform: translateX(-100vw);
+    }
+  }
+}
+
+//     @media (max-width: 600px) {
+//       @keyframes showProjects {
+// 	0% {
+// 	  transform: scale(0.75) translateX(-100vw);
+// 	}
+// 	30% {
+// 	  transform: scale(0.55, 0.95) translateX(10vw);
+// 	}
+// 	50% {
+// 	  transform: scale(0.75, 0.55) translateX(-5vw);
+// 	}
+// 	100% {
+// 	  transform: scale(0.75) translateX(0);
+// 	}
+//       }
+
+//       @keyframes hideProjects {
+// 	0% {
+// 	  transform: scale(0.75) translateX(0);
+// 	}
+// 	30% {
+// 	  transform: scale(0.55, 0.95) translateX(-110vw);
+// 	}
+// 	100% {
+// 	  transform: scale(0.75) translateX(-100vw);
+// 	}
+//       }
+//     }
+
+@media (max-width: 375px) {
+  #projects {
+    left: 3.025rem;
+    width: calc(100vw - 3.025rem);
+  }
+}
