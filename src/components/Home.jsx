@@ -1,3 +1,5 @@
+import "./styles/css/Home.css";
+
 const Home = ({ page, initial }) => {
   return (
     <div
