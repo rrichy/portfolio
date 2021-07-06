@@ -13,8 +13,7 @@ export const HighlightProject = ({ data }) => {
       <svg className="highlight-project__bracket" height="100%" width="100%">
         <rect className="highlight-project__rect" height="100%" width="100%" />
       </svg>
-      <div className="highlight-project__info">
-        <h2 className="highlight-project__title">{title}</h2>
+      <div className="highlight-project__info" text={title}>
         <div className="highlight-project__icons">
           <a href={csrc} target="_blank" referrerPolicy="no-referrer">
             <FontAwesomeIcon icon={faCode} />

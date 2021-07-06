@@ -1,9 +1,10 @@
 import React, { Component, useEffect, useState } from "react";
 
 import Welcome from "./components/Welcome";
-import Projects from "./components/Projects";
 import Navigation from "./components/Navigation";
 import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import "./App.css";
 
 class App extends Component {
@@ -53,6 +54,9 @@ class App extends Component {
         )}
         {!showWelcomeScreen && (
           <Projects page={currentPage} initial={projectsInitial} />
+        )}
+        {!showWelcomeScreen && (
+          <Contact page={currentPage} initial={contactInitial} />
         )}
       </>
     );
