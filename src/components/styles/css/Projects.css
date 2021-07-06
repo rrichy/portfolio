@@ -220,6 +220,13 @@ h1 {
   transition: all 0.4s;
 }
 
+.highlight-project__info::before {
+  content: attr(text);
+  margin: 0.83em 0;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 .highlight-project__icons {
   display: -webkit-box;
   display: -ms-flexbox;
