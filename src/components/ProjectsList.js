@@ -7,13 +7,13 @@ export const highlightProjects = [
   ],
   [
     "Wiki Viewer",
-    "../../images/wiki-viewer.png",
+    "/images/wiki-viewer.png",
     "https://github.com/rrichy/wiki-viewer",
     "https://rrichy.github.io/wiki-viewer/",
   ],
   [
     "Multiplayer Game",
-    "../../images/multiplayer-game.png",
+    "/images/multiplayer-game.png",
     "https://replit.com/@rrichy/boilerplate-project-secure-real-time-multiplayer-game",
   ],
 ]; // [Title, imgsrc, srccode, url]
