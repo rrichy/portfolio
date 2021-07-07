@@ -1,7 +1,5 @@
 import React from "react";
 import {
-  CssBaseline,
-  Box,
   Container,
   Grid,
   Button,
@@ -10,6 +8,7 @@ import {
   ThemeProvider,
 } from "@material-ui/core";
 import { createMuiTheme } from "@material-ui/core/styles";
+import axios from "axios";
 
 import "./styles/css/Contact.css";
 import useStyles from "./styles/materialui/Contact";
@@ -34,6 +33,33 @@ const theme = createMuiTheme({
   },
 });
 
+const Submit = (e) => {
+  const fields = [...e.target.elements].map((a) => a.value);
+  const [name, email, website, message] = fields;
+  // console.log({ name, email, website, message });
+  e.preventDefault();
+
+  axios({
+    method: "post",
+    url: "https://app.99inbound.com/api/e/_wTr9EZA",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    data: { name, email, website, message },
+  }).then((response) => {
+    console.log(response);
+  });
+};
+
+const Clear = () => {
+  const input = [...document.querySelectorAll("input")];
+  const textarea = document.querySelector("textarea");
+
+  input.forEach((i) => (i.value = ""));
+  textarea.value = "";
+};
+
 const Contact = ({ page, initial }) => {
   const classes = useStyles();
   return (
@@ -43,15 +69,12 @@ const Contact = ({ page, initial }) => {
         initial ? "" : page === "contact" ? "show-contact" : "hide-contact"
       }
     >
-      {/* <CssBaseline /> */}
       <ThemeProvider theme={theme}>
         <Container align="center" className={classes.container}>
           <Typography variant="h3" component="h2" gutterBottom>
             Leave a Message
           </Typography>
-          <form
-            action="https://app.99inbound.com/f/824d5495-4a99-454a-bbf7-140ede97c573/api/forms/5399/entries" /* className={classes.form} */
-          >
+          <form onSubmit={Submit} autoComplete="off">
             <TextField
               label="Name"
               name="name"
@@ -70,7 +93,7 @@ const Contact = ({ page, initial }) => {
             />
             <TextField
               label="Website"
-              name="site"
+              name="website"
               variant="filled"
               color="secondary"
               fullWidth
@@ -97,7 +120,12 @@ const Contact = ({ page, initial }) => {
                 </Button>
               </Grid>
               <Grid item xs={6}>
-                <Button variant="contained" color="secondary" fullWidth>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  onClick={Clear}
+                  fullWidth
+                >
                   Clear
                 </Button>
               </Grid>

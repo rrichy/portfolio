@@ -45,3 +45,54 @@
     transform: translateX(100vw) translateY(-50%);
   }
 }
+
+// media
+@media (max-width: 985px) {
+  #contact {
+    // transform: translateX(-100vw);
+    left: 4.15rem;
+    // top: 0;
+    // margin-top: 2rem;
+    // height: auto;
+    width: calc(100vw - 4.15rem);
+    // position: absolute;
+    // transform: translateX(100vw) translateY(-50%);
+  }
+
+  @keyframes showContact {
+    0% {
+      transform: translateX(-100vw) translateY(-50%);
+    }
+    30% {
+      transform: translateX(10vw) translateY(-50%);
+    }
+    50% {
+      transform: translateX(-5vw) translateY(-50%);
+    }
+    100% {
+      transform: translateX(0) translateY(-50%);
+    }
+  }
+
+  @keyframes hideContact {
+    0% {
+      transform: translateX(0) translateY(-50%);
+    }
+    30% {
+      transform: translateX(-110vw) translateY(-50%);
+    }
+    100% {
+      transform: translateX(-100vw) translateY(-50%);
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  #contact {
+    left: 3.025rem;
+    width: calc(100vw - 3.025rem);
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+}
