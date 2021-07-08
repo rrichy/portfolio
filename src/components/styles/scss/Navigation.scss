@@ -2,64 +2,78 @@
 
 #navigation {
   height: 100vh;
-  width: 31vh;
+  width: 100vw;
   position: fixed;
-  right: 0%;
-  font-size: 3rem;
   background: linear-gradient(
-    94deg,
-    transparent 0%,
-    transparent 19.5%,
-    $accent1 20%
+    216deg,
+    $bg1 30%,
+    $textColor 30.1%,
+    transparent 31%
   );
   color: $textColor;
-  transition: transform 0.7s;
-  z-index: 20;
-}
+  z-index: 10;
+  pointer-events: none;
 
-#nav-wrapper {
-  position: absolute;
-  right: 0%;
-  width: fit-content;
-  text-align: right;
-  padding-top: 1rem;
-  padding-right: 2rem;
-  h1 {
-    margin: 0;
-    text-decoration: underline solid 0.3rem;
+  a {
+    margin: 0 0.8rem;
+    text-decoration: none;
+    color: $textColor;
     font-size: 5vh;
+    font-weight: bold;
     transition: color 0.2s, transform 0.2s;
     &:hover {
       color: $accent2;
-      cursor: pointer;
+      // cursor: pointer;
       transform: scale(1.1);
     }
   }
+  animation: showNav 0.7s forwards;
+}
+
+.active-page {
+  color: $accent2 !important;
+  // cursor: pointer;
+  transform: scale(1.1);
+}
+
+@keyframes showNav {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0vw);
+  }
+}
+
+#nav-wrapper {
+  display: flex;
+  position: absolute;
+  top: 16%; // calculate this
+  left: 53%; // and this
+  transform: rotate(36deg);
+  pointer-events: all;
 }
 
 #account-wrapper {
+  display: flex;
   position: absolute;
-  bottom: 0;
-  right: 0;
-  padding-right: 2rem;
-  padding-bottom: 0.5rem;
+  top: 28%; // calculate this
+  left: 75%; // and this
+  transform: rotate(306deg);
+  pointer-events: all;
 
-  .fa-github,
-  .fa-free-code-camp,
-  .fa-codepen {
-    margin: 0.5rem;
-    transition: color 0.2s;
-    font-size: 2.6rem;
-    &:hover {
-      color: $accent2;
-      transform: scale(1.1);
-      cursor: pointer;
-    }
-  }
-}
-
-.hidden {
-  transform: translateX(100vw);
+  // .fa-github,
+  // .fa-free-code-camp,
+  // .fa-codepen {
+  //   margin: 0.5rem;
+  //   transition: color 0.2s;
+  //   font-size: 2.6rem;
+  //   &:hover {
+  //     color: $accent2;
+  //     transform: scale(1.1);
+  //     cursor: pointer;
+  //   }
+  // }
 }
 
 @media (max-width: 985px) {

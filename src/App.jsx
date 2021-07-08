@@ -9,55 +9,37 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    showWelcomeScreen: true,
-    currentPage: "home",
-    navInitiated: false,
-    homeInitial: true,
-    projectsInitial: true,
-    contactInitial: true,
+    currentPage: "welcome",
   };
 
-  hideWelcomeScreen = () => {
-    const welcome = document.querySelector("#greet");
+  switchPage = (from, to = "home") => {
+    if (from === to) return;
+    let duration = 200;
+    if (from === "welcome") {
+      document.querySelector("#greet").setAttribute("class", "hide-welcome");
+      document.querySelector("#welcome").lastChild.remove();
 
-    welcome.firstChild.setAttribute("class", "hide-welcome");
-    welcome.lastChild.remove();
+      duration = 1000;
+    } else {
+      document.querySelector("#" + from).setAttribute("class", "hide-" + from);
+    }
 
     setTimeout(() => {
-      this.setState({ showWelcomeScreen: false, navInitiated: true });
-    }, 1000);
-  };
-
-  changePage = (page) => {
-    this.setState({
-      currentPage: page,
-      homeInitial: false,
-      projectsInitial: false,
-      contactInitial: false,
-    });
+      this.setState({ currentPage: to });
+    }, duration);
   };
 
   render() {
-    const {
-      showWelcomeScreen,
-      currentPage,
-      homeInitial,
-      projectsInitial,
-      contactInitial,
-    } = this.state;
+    const { currentPage } = this.state;
     return (
       <>
-        {showWelcomeScreen && <Welcome show={this.hideWelcomeScreen} />}
-        <Navigation show={!showWelcomeScreen} change={this.changePage} />
-        {!showWelcomeScreen && (
-          <Home page={currentPage} initial={homeInitial} />
+        {currentPage === "welcome" && <Welcome switchPage={this.switchPage} />}
+        {currentPage !== "welcome" && (
+          <Navigation switchPage={this.switchPage} page={currentPage} />
         )}
-        {!showWelcomeScreen && (
-          <Projects page={currentPage} initial={projectsInitial} />
-        )}
-        {!showWelcomeScreen && (
-          <Contact page={currentPage} initial={contactInitial} />
-        )}
+        {currentPage === "home" && <Home />}
+        {currentPage === "projects" && <Projects />}
+        {currentPage === "contact" && <Contact />}
       </>
     );
   }

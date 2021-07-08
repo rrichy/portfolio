@@ -1,53 +1,18 @@
 @import "./variables";
+@import "./animations";
 
 #home {
-  transform: translateX(100vw);
   position: fixed;
-  width: calc(100% - 30vh);
+  width: 100vw;
+  opacity: 0;
 }
 
 .hide-home {
-  transform: translateX(0);
-
-  animation: hideHome 2s ease forwards;
+  @include hide;
 }
 
 .show-home {
-  animation: showHome 2s ease forwards 0.2s;
-}
-
-.show-home-initial {
-  animation: showHome 2s ease forwards 0.4s;
-}
-
-@keyframes showHome {
-  0% {
-    transform: scale(1) translateX(100vw);
-  }
-  30% {
-    transform: scale(0.8, 1.2) translateX(-10vw);
-  }
-  50% {
-    transform: scale(1, 0.8) translateX(5vw);
-  }
-  100% {
-    transform: scale(1) translateX(0);
-  }
-}
-
-@keyframes hideHome {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: scale(1) translateX(110vw);
-  }
-  30% {
-    transform: scale(0.8, 1.2) translateX(110vw);
-  }
-  100% {
-    transform: scale(1) translateX(100vw);
-  }
+  @include show;
 }
 
 #data-home {
@@ -61,6 +26,10 @@
   span {
     font-size: 1.2em;
     color: $accent1;
+  }
+
+  h1 {
+    margin: 2rem 0;
   }
 
   h2 {
@@ -91,7 +60,7 @@
   100% {
     stroke-dasharray: 63 20;
     stroke-dashoffset: 300;
-    transform: scale(1.1);
+    transform: scale(1.3);
   }
 }
 

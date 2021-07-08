@@ -1,57 +1,27 @@
 @import "./variables";
+@import "./animations";
 
 #projects {
   position: fixed;
   height: 100vh;
-  width: calc(100vw - 30vh);
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  transform: translateX(100vw);
+  opacity: 0;
+  // transform: translateX(100vw);
+  h1 {
+    margin: 0 0 2rem 0;
+  }
 }
 
 .show-projects {
-  animation: showProjects 2s ease forwards 0.2s;
+  @include show;
 }
 
 .hide-projects {
-  animation: hideProjects 2s ease forwards;
-}
-
-@keyframes showProjects {
-  0% {
-    transform: translateX(100vw);
-  }
-  30% {
-    transform: translateX(-10vw);
-  }
-  50% {
-    transform: translateX(5vw);
-  }
-  100% {
-    transform: scale(1) translateX(0);
-  }
-}
-
-@keyframes hideProjects {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(110vw);
-  }
-  30% {
-    transform: translateX(110vw);
-  }
-  100% {
-    transform: translateX(100vw);
-  }
-}
-
-h1 {
-  margin: 0 0 2rem 0;
+  @include hide;
 }
 
 #highlight-projects-container {

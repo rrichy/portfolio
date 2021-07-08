@@ -60,15 +60,10 @@ const Clear = () => {
   textarea.value = "";
 };
 
-const Contact = ({ page, initial }) => {
+const Contact = () => {
   const classes = useStyles();
   return (
-    <div
-      id="contact"
-      className={
-        initial ? "" : page === "contact" ? "show-contact" : "hide-contact"
-      }
-    >
+    <div id="contact" className="show-contact">
       <ThemeProvider theme={theme}>
         <Container align="center" className={classes.container}>
           <Typography variant="h3" component="h2" gutterBottom>
