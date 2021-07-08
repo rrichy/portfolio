@@ -3,14 +3,9 @@ import { highlightProjects } from "./ProjectsList";
 
 import "./styles/css/Projects.css";
 
-const Projects = ({ page, initial }) => {
+const Projects = () => {
   return (
-    <div
-      id="projects"
-      className={
-        initial ? "" : page === "projects" ? "show-projects" : "hide-projects"
-      }
-    >
+    <div id="projects" className="show-projects">
       <h1>Highlights</h1>
       <div id="highlight-projects-container">
         {highlightProjects.map((p) => (

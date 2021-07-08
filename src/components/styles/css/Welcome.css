@@ -1,21 +1,25 @@
-#greet {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+#welcome {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  min-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 22;
 }
 
-#greet text {
-  fill: #231f20;
-  font-size: 2rem;
-  font-style: italic;
-  font-weight: 300;
-  stroke-width: 5;
-  cursor: default;
-  animation: waitClick 1s reverse infinite;
-}
-
-#greet .greet {
+#welcome #greet {
   fill: transparent;
   stroke: #fff;
   font-size: 10rem;
@@ -27,16 +31,20 @@
           animation: animateText 7s forwards, glow 1s ease-in-out infinite alternate;
 }
 
-#greet .hide-welcome {
-  fill: transparent;
-  stroke: #fff;
-  font-size: 10rem;
-  font-weight: 400;
-  stroke-width: 5;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-  -webkit-animation: hideText 1s, glow 1s ease-in-out infinite alternate;
-          animation: hideText 1s, glow 1s ease-in-out infinite alternate;
+#welcome .hide-welcome {
+  -webkit-animation: hideText 1.1s, glow 1.1s ease-in-out infinite alternate !important;
+          animation: hideText 1.1s, glow 1.1s ease-in-out infinite alternate !important;
+}
+
+#welcome a {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  text-decoration: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: black;
+  font-size: 2em;
 }
 
 @-webkit-keyframes animateText {
