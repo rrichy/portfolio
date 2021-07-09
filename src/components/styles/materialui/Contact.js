@@ -1,19 +1,19 @@
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles((theme) => ({
+const styles = (theme) => ({
   container: {
     background: "#bb4430",
-    width: "80%",
     padding: "1rem",
+    borderRadius: ".4rem",
+    boxShadow: "#231f20 0px 5px 5px",
     "& *": {
       marginTop: theme.spacing(0.5),
     },
-
-    "&::before": {
-      content: "hello",
-    },
   },
-  buttons: {},
-}));
+  wrapper: {
+    maxWidth: "680px",
+  },
+  message: {
+    maxWidth: "680px",
+  },
+});
 
-export default useStyles;
+export default styles;

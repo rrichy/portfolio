@@ -15,11 +15,11 @@ export const HighlightProject = ({ data }) => {
       </svg>
       <div className="highlight-project__info" text={title}>
         <div className="highlight-project__icons">
-          <a href={csrc} target="_blank" referrerPolicy="no-referrer">
+          <a href={csrc} target="_blank" rel="noreferrer">
             <FontAwesomeIcon icon={faCode} />
           </a>
           {url && (
-            <a href={url} target="_blank" referrerPolicy="no-referrer">
+            <a href={url} target="_blank" rel="noreferrer">
               <FontAwesomeIcon icon={faExternalLinkAlt} />
             </a>
           )}

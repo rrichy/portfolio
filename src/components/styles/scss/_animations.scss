@@ -4,7 +4,7 @@
   }
 }
 
-@mixin animate($name, $duration, $timing, $direction, $delay: 0) {
+@mixin animate($name, $duration, $timing, $direction, $delay: 0s) {
   animation: $name $duration $timing $direction $delay;
 }
 
@@ -27,6 +27,7 @@
 
 @include keyframes(hide) {
   0% {
+    opacity: 1;
     transform: translateX(0);
   }
   25% {
@@ -36,6 +37,7 @@
     transform: scale(0.8, 1.2) translateX(110vw);
   }
   100% {
+    opacity: 1;
     transform: scale(1) translateX(100vw);
   }
 }
@@ -45,5 +47,5 @@
 }
 
 @mixin hide {
-  @include animate(hide, 2s, ease, forwards);
+  @include animate(hide, 2s, ease, forwards, 0s);
 }
