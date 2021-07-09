@@ -42,6 +42,7 @@
 
 @-webkit-keyframes hide {
   0% {
+    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -54,6 +55,7 @@
             transform: scale(0.8, 1.2) translateX(110vw);
   }
   100% {
+    opacity: 1;
     -webkit-transform: scale(1) translateX(100vw);
             transform: scale(1) translateX(100vw);
   }
@@ -61,6 +63,7 @@
 
 @keyframes hide {
   0% {
+    opacity: 1;
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
@@ -73,6 +76,7 @@
             transform: scale(0.8, 1.2) translateX(110vw);
   }
   100% {
+    opacity: 1;
     -webkit-transform: scale(1) translateX(100vw);
             transform: scale(1) translateX(100vw);
   }
@@ -84,14 +88,14 @@
   opacity: 0;
 }
 
-.hide-home {
-  -webkit-animation: hide 2s ease forwards 0;
-          animation: hide 2s ease forwards 0;
-}
-
 .show-home {
   -webkit-animation: show 2s ease forwards 0.2s;
           animation: show 2s ease forwards 0.2s;
+}
+
+.hide-home {
+  -webkit-animation: hide 2s ease forwards 0s;
+          animation: hide 2s ease forwards 0s;
 }
 
 #data-home {

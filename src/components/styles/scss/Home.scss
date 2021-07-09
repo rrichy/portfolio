@@ -7,12 +7,12 @@
   opacity: 0;
 }
 
-.hide-home {
-  @include hide;
-}
-
 .show-home {
   @include show;
+}
+
+.hide-home {
+  @include hide;
 }
 
 #data-home {

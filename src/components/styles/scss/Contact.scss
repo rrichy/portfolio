@@ -1,49 +1,23 @@
 @import "./variables";
+@import "./animations";
 
 #contact {
   position: fixed;
-  width: calc(100vw - 30vh);
-  top: 50%;
-  transform: translateX(100vw) translateY(-50%);
-}
+  width: 100vw;
+  height: 100vh;
 
-.hide-contact {
-  transform: translateX(0);
-  animation: hideContact 2s ease forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
 }
 
 .show-contact {
-  animation: showContact 2s ease forwards 0.2s;
+  @include show;
 }
 
-@keyframes showContact {
-  0% {
-    transform: translateX(100vw) translateY(-50%);
-  }
-  30% {
-    transform: translateX(-10vw) translateY(-50%);
-  }
-  50% {
-    transform: translateX(5vw) translateY(-50%);
-  }
-  100% {
-    transform: scale(1) translateX(0) translateY(-50%);
-  }
-}
-
-@keyframes hideContact {
-  0% {
-    transform: translateX(0) translateY(-50%);
-  }
-  25% {
-    transform: translateX(110vw) translateY(-50%);
-  }
-  30% {
-    transform: translateX(110vw) translateY(-50%);
-  }
-  100% {
-    transform: translateX(100vw) translateY(-50%);
-  }
+.hide-contact {
+  @include hide;
 }
 
 // media

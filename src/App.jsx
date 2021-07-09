@@ -14,6 +14,7 @@ class App extends Component {
 
   switchPage = (from, to = "home") => {
     if (from === to) return;
+
     let duration = 200;
     if (from === "welcome") {
       document.querySelector("#greet").setAttribute("class", "hide-welcome");
