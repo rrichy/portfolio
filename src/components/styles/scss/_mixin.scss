@@ -1,0 +1,10 @@
+@import "./variables";
+
+@mixin bgGradient($angle) {
+  background: linear-gradient(
+    $angle,
+    $bg1 30%,
+    $textColor 30.1%,
+    transparent 30.5%
+  );
+}

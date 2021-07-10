@@ -1,5 +1,5 @@
 import { HighlightProject, NormalProject } from "./Projects/Project";
-import { highlightProjects } from "./ProjectsList";
+import { highlightProjects, normalProjects } from "./ProjectsList";
 
 import "./styles/css/Projects.css";
 
@@ -10,6 +10,12 @@ const Projects = () => {
       <div id="highlight-projects-container">
         {highlightProjects.map((p) => (
           <HighlightProject key={p[0]} data={p} />
+        ))}
+      </div>
+      <h2>Other projects</h2>
+      <div id="normal-projects-container">
+        {normalProjects.map((p) => (
+          <NormalProject key={p[0]} data={p} />
         ))}
       </div>
     </div>

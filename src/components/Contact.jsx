@@ -1,16 +1,10 @@
 import React, { Component } from "react";
-import {
-  Container,
-  Grid,
-  Button,
-  TextField,
-  Typography,
-  ThemeProvider,
-} from "@material-ui/core";
+import { Container, Typography, ThemeProvider } from "@material-ui/core";
 import axios from "axios";
 import { withStyles, withTheme } from "@material-ui/core/styles";
 
-import "./styles/css/Contact.css";
+import Form from "./Form";
+import "./styles/css/Contact.css"; // if possible, migrate all css styles to material-ui
 import styles from "./styles/materialui/Contact";
 import theme from "./styles/materialui/theme";
 
@@ -57,68 +51,14 @@ class Contact extends Component {
                 Leave a Message
               </Typography>
               {this.state.message === "" && (
-                <form onSubmit={this.submit} autoComplete="off">
-                  <TextField
-                    label="Name"
-                    name="name"
-                    variant="filled"
-                    color="secondary"
-                    fullWidth
-                    required
-                  />
-                  <TextField
-                    label="E-mail"
-                    name="email"
-                    variant="filled"
-                    color="secondary"
-                    fullWidth
-                    required
-                  />
-                  <TextField
-                    label="Website"
-                    name="website"
-                    variant="filled"
-                    color="secondary"
-                    fullWidth
-                  />
-                  <TextField
-                    label="Message"
-                    name="message"
-                    multiline
-                    rows={4}
-                    variant="filled"
-                    color="secondary"
-                    fullWidth
-                    required
-                  />
-                  <Grid container className={classes.buttons} spacing={2}>
-                    <Grid item xs={6}>
-                      <Button
-                        variant="contained"
-                        color="secondary"
-                        type="submit"
-                        fullWidth
-                      >
-                        Submit
-                      </Button>
-                    </Grid>
-                    <Grid item xs={6}>
-                      <Button
-                        variant="contained"
-                        color="secondary"
-                        onClick={this.clear}
-                        fullWidth
-                      >
-                        Clear
-                      </Button>
-                    </Grid>
-                  </Grid>
-                </form>
+                <Form submit={this.submit} clear={this.clear} />
               )}
               {this.state.message && (
-                <Typography variant="h4" component="h3" gutterBottom>
-                  {this.state.message}
-                </Typography>
+                <div className={classes.messageContainer}>
+                  <Typography variant="h4" component="h3" gutterBottom>
+                    {this.state.message}
+                  </Typography>
+                </div>
               )}
             </Container>
           </ThemeProvider>

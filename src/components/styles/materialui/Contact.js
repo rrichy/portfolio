@@ -11,7 +11,8 @@ const styles = (theme) => ({
   wrapper: {
     maxWidth: "680px",
   },
-  message: {
+  messageContainer: {
+    width: "100vw",
     maxWidth: "680px",
   },
 });

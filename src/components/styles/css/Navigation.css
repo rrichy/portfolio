@@ -1,13 +1,17 @@
 #navigation {
+  background: #bb4430;
+  -webkit-box-shadow: #231f20 0px 5px 5px;
+          box-shadow: #231f20 0px 5px 5px;
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background: linear-gradient(216deg, #bb4430 30%, #231f20 30.1%, transparent 31%);
   color: #231f20;
   z-index: 10;
   pointer-events: none;
-  -webkit-animation: showNav 0.7s forwards;
-          animation: showNav 0.7s forwards;
+  -webkit-transform: rotate(26deg) translateY(-93%);
+          transform: rotate(26deg) translateY(-93%);
+  -webkit-animation: initializeNav 0.7s;
+          animation: initializeNav 0.7s;
 }
 
 #navigation a {
@@ -28,153 +32,49 @@
           transform: scale(1.1);
 }
 
+.on-projects {
+  -webkit-transform: rotate(0) translateY(-93%) !important;
+          transform: rotate(0) translateY(-93%) !important;
+}
+
+.on-projects #nav-wrapper {
+  right: 4.5%;
+}
+
+.default-nav {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
 .active-page {
   color: #588b8b !important;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-@-webkit-keyframes showNav {
+@-webkit-keyframes initializeNav {
   from {
-    -webkit-transform: translateX(100vw);
-            transform: translateX(100vw);
-  }
-  to {
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
+    -webkit-transform: rotate(26deg) translateY(-193%);
+            transform: rotate(26deg) translateY(-193%);
   }
 }
 
-@keyframes showNav {
+@keyframes initializeNav {
   from {
-    -webkit-transform: translateX(100vw);
-            transform: translateX(100vw);
-  }
-  to {
-    -webkit-transform: translateX(0vw);
-            transform: translateX(0vw);
+    -webkit-transform: rotate(26deg) translateY(-193%);
+            transform: rotate(26deg) translateY(-193%);
   }
 }
 
 #nav-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 28%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 16%;
-  left: 53%;
-  -webkit-transform: rotate(36deg);
-          transform: rotate(36deg);
   pointer-events: all;
-}
-
-#account-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 28%;
-  left: 75%;
-  -webkit-transform: rotate(306deg);
-          transform: rotate(306deg);
-  pointer-events: all;
-}
-
-@media (max-width: 985px) {
-  #navigation {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0.2rem;
-    left: 0;
-    background: #bb4430;
-  }
-  #nav-wrapper {
-    position: relative;
-    left: 0;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    text-align: left;
-    padding: 0;
-  }
-  #nav-wrapper h1 {
-    text-orientation: sideways;
-    -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl;
-    text-decoration: none;
-    margin: 1.4rem 0;
-    font-size: 2.5rem;
-  }
-  #account-wrapper {
-    position: absolute;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 2rem;
-  }
-  #account-wrapper .fa-github,
-  #account-wrapper .fa-free-code-camp,
-  #account-wrapper .fa-codepen {
-    margin: 0.5rem;
-    font-size: 2.5rem;
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
-  }
-  #account-wrapper .fa-github:hover,
-  #account-wrapper .fa-free-code-camp:hover,
-  #account-wrapper .fa-codepen:hover {
-    color: #588b8b;
-    cursor: pointer;
-  }
-  .hidden {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
-@media (max-width: 375px) {
-  #nav-wrapper {
-    position: relative;
-    left: 0;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    text-align: left;
-    padding: 0;
-  }
-  #nav-wrapper h1 {
-    text-orientation: sideways;
-    -webkit-writing-mode: vertical-rl;
-        -ms-writing-mode: tb-rl;
-            writing-mode: vertical-rl;
-    text-decoration: none;
-    margin: 1.4rem 0;
-    font-size: 1.8rem;
-  }
-  #account-wrapper .fa-github,
-  #account-wrapper .fa-free-code-camp,
-  #account-wrapper .fa-codepen {
-    margin: 0.5rem;
-    font-size: 2rem;
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
-  }
-  #account-wrapper .fa-github:hover,
-  #account-wrapper .fa-free-code-camp:hover,
-  #account-wrapper .fa-codepen:hover {
-    color: #588b8b;
-    cursor: pointer;
-  }
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 /*# sourceMappingURL=Navigation.css.map */

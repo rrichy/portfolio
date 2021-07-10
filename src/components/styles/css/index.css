@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
+@media (max-width: 1921px) {
+  .on-projects #nav-wrapper {
+    right: 4.5%;
+  }
+  #nav-wrapper {
+    right: 26%;
+  }
+}
+
 *,
 body {
   margin: 0;
@@ -7,26 +16,16 @@ body {
 }
 
 body {
+  background: linear-gradient(142deg, #bb4430 30%, #231f20 30.1%, transparent 30.5%);
   height: 100vh;
-  background: linear-gradient(142deg, #bb4430 30%, #231f20 30.1%, transparent 31%);
   background-color: #fafafa;
 }
 
 body::before {
+  background: linear-gradient(57deg, #bb4430 30%, #231f20 30.1%, transparent 30.5%);
   position: absolute;
   height: 100%;
   width: 100%;
   content: "";
-  background: linear-gradient(57deg, #bb4430 30%, #231f20 30.1%, transparent 31%);
-}
-
-body::after {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  content: "";
-  background: linear-gradient(306deg, #bb4430 30%, #231f20 30.1%, transparent 31%);
-  pointer-events: none;
-  z-index: 11;
 }
 /*# sourceMappingURL=index.css.map */
