@@ -1,0 +1,356 @@
+@media (max-width: 1921px) {
+  .on-projects {
+    & #nav-wrapper {
+      right: 4.5%;
+    }
+  }
+
+  #nav-wrapper {
+    right: 26%;
+  }
+}
+// // media
+/////////////////////HOME
+// @media (max-width: 985px) {
+// 	#home {
+// 	  transform: translateX(-100vw);
+// 	  left: 4.15rem;
+// 	  width: calc(100vw - 4.15rem);
+// 	}
+
+// 	@keyframes showHome {
+// 	  0% {
+// 	    transform: scale(0.9) translateX(-100vw);
+// 	  }
+// 	  30% {
+// 	    transform: scale(0.7, 1.1) translateX(10vw);
+// 	  }
+// 	  50% {
+// 	    transform: scale(0.9, 0.7) translateX(-5vw);
+// 	  }
+// 	  100% {
+// 	    transform: scale(0.9) translateX(0);
+// 	  }
+// 	}
+
+// 	@keyframes hideHome {
+// 	  0% {
+// 	    transform: scale(0.9) translateX(0);
+// 	  }
+// 	  30% {
+// 	    transform: scale(0.7, 1.1) translateX(-110vw);
+// 	  }
+// 	  100% {
+// 	    transform: scale(0.9) translateX(-100vw);
+// 	  }
+// 	}
+//       }
+
+//       @media (max-width: 600px) {
+// 	#home {
+// 	  left: 2.15rem;
+// 	  width: 100vw;
+// 	}
+// 	@keyframes showHome {
+// 	  0% {
+// 	    transform: scale(0.75) translateX(-100vw);
+// 	  }
+// 	  30% {
+// 	    transform: scale(0.55, 0.95) translateX(10vw);
+// 	  }
+// 	  50% {
+// 	    transform: scale(0.75, 0.55) translateX(-5vw);
+// 	  }
+// 	  100% {
+// 	    transform: scale(0.75) translateX(0);
+// 	  }
+// 	}
+
+// 	@keyframes hideHome {
+// 	  0% {
+// 	    transform: scale(0.75) translateX(0);
+// 	  }
+// 	  30% {
+// 	    transform: scale(0.55, 0.95) translateX(-210vw);
+// 	  }
+// 	  100% {
+// 	    transform: scale(0.75) translateX(-200vw);
+// 	  }
+// 	}
+//       }
+
+//       @media (max-width: 475px) {
+// 	#home {
+// 	  left: -3.85rem;
+// 	  width: 150vw;
+// 	}
+// 	@keyframes showHome {
+// 	  0% {
+// 	    transform: scale(0.65) translateX(-100vw);
+// 	  }
+// 	  30% {
+// 	    transform: scale(0.45, 0.85) translateX(10vw);
+// 	  }
+// 	  50% {
+// 	    transform: scale(0.65, 0.45) translateX(-5vw);
+// 	  }
+// 	  100% {
+// 	    transform: scale(0.65) translateX(0);
+// 	  }
+// 	}
+
+// 	@keyframes hideHome {
+// 	  0% {
+// 	    transform: scale(0.65) translateX(0);
+// 	  }
+// 	  30% {
+// 	    transform: scale(0.45, 0.85) translateX(-210vw);
+// 	  }
+// 	  100% {
+// 	    transform: scale(0.65) translateX(-200vw);
+// 	  }
+// 	}
+//       }
+//////////////////////welcome
+// @media (max-width: 985px) {
+// 	#greet {
+// 	  .greet {
+// 	    font-size: 13rem;
+// 	    transform: translateY(-5%);
+// 	  }
+
+// 	  text {
+// 	    font-size: 2.5rem;
+// 	  }
+// 	}
+//       }
+
+//       @media (max-width: 375px) {
+// 	#greet {
+// 	  .greet {
+// 	    font-size: 16rem;
+// 	    transform: translateY(-5%);
+// 	  }
+
+// 	  text {
+// 	    font-size: 3.5rem;
+// 	  }
+// 	}
+//       }
+
+////////////////////navigation
+// @media (max-width: 985px) {
+// 	#navigation {
+// 	  width: fit-content;
+// 	  padding: 0.2rem;
+// 	  left: 0;
+// 	  background: $accent1;
+// 	}
+
+// 	#nav-wrapper {
+// 	  position: relative;
+// 	  left: 0;
+// 	  width: fit-content;
+// 	  text-align: left;
+// 	  padding: 0;
+// 	  h1 {
+// 	    text-orientation: sideways;
+// 	    writing-mode: vertical-rl;
+// 	    text-decoration: none;
+
+// 	    margin: 1.4rem 0;
+// 	    font-size: 2.5rem;
+// 	  }
+// 	}
+
+// 	#account-wrapper {
+// 	  position: absolute;
+// 	  left: 0;
+// 	  display: flex;
+// 	  flex-direction: column;
+// 	  padding: 0;
+// 	  align-items: center;
+// 	  margin-bottom: 2rem;
+
+// 	  .fa-github,
+// 	  .fa-free-code-camp,
+// 	  .fa-codepen {
+// 	    margin: 0.5rem;
+// 	    font-size: 2.5rem;
+// 	    transition: color 0.2s;
+// 	    &:hover {
+// 	      color: $accent2;
+// 	      cursor: pointer;
+// 	    }
+// 	  }
+// 	}
+
+// 	.hidden {
+// 	  transform: translateX(-100%);
+// 	}
+//       }
+
+//       @media (max-width: 375px) {
+// 	#nav-wrapper {
+// 	  position: relative;
+// 	  left: 0;
+// 	  width: fit-content;
+// 	  text-align: left;
+// 	  padding: 0;
+// 	  h1 {
+// 	    text-orientation: sideways;
+// 	    writing-mode: vertical-rl;
+// 	    text-decoration: none;
+
+// 	    margin: 1.4rem 0;
+// 	    font-size: 1.8rem;
+// 	  }
+// 	}
+
+// 	#account-wrapper {
+// 	  .fa-github,
+// 	  .fa-free-code-camp,
+// 	  .fa-codepen {
+// 	    margin: 0.5rem;
+// 	    font-size: 2rem;
+// 	    transition: color 0.2s;
+// 	    &:hover {
+// 	      color: $accent2;
+// 	      cursor: pointer;
+// 	    }
+// 	  }
+// 	}
+//       }
+
+//////////////////projects
+// media
+// @media (max-width: 985px) {
+// 	#projects {
+// 	  transform: translateX(-100vw);
+// 	  left: 4.15rem;
+// 	  top: 0;
+// 	  margin-top: 2rem;
+// 	  height: auto;
+// 	  width: calc(100vw - 4.15rem);
+// 	  position: absolute;
+// 	}
+
+// 	#highlight-projects-container {
+// 	  flex-direction: column;
+// 	}
+
+// 	@keyframes showProjects {
+// 	  0% {
+// 	    transform: translateX(-100vw);
+// 	  }
+// 	  30% {
+// 	    transform: translateX(10vw);
+// 	  }
+// 	  50% {
+// 	    transform: translateX(-5vw);
+// 	  }
+// 	  100% {
+// 	    transform: translateX(0);
+// 	  }
+// 	}
+
+// 	@keyframes hideProjects {
+// 	  0% {
+// 	    transform: translateX(0);
+// 	  }
+// 	  30% {
+// 	    transform: translateX(-110vw);
+// 	  }
+// 	  100% {
+// 	    transform: translateX(-100vw);
+// 	  }
+// 	}
+//       }
+
+//       //     @media (max-width: 600px) {
+//       //       @keyframes showProjects {
+//       // 	0% {
+//       // 	  transform: scale(0.75) translateX(-100vw);
+//       // 	}
+//       // 	30% {
+//       // 	  transform: scale(0.55, 0.95) translateX(10vw);
+//       // 	}
+//       // 	50% {
+//       // 	  transform: scale(0.75, 0.55) translateX(-5vw);
+//       // 	}
+//       // 	100% {
+//       // 	  transform: scale(0.75) translateX(0);
+//       // 	}
+//       //       }
+
+//       //       @keyframes hideProjects {
+//       // 	0% {
+//       // 	  transform: scale(0.75) translateX(0);
+//       // 	}
+//       // 	30% {
+//       // 	  transform: scale(0.55, 0.95) translateX(-110vw);
+//       // 	}
+//       // 	100% {
+//       // 	  transform: scale(0.75) translateX(-100vw);
+//       // 	}
+//       //       }
+//       //     }
+
+//       @media (max-width: 375px) {
+// 	#projects {
+// 	  left: 3.025rem;
+// 	  width: calc(100vw - 3.025rem);
+// 	}
+//       }
+
+////////conntact
+// media
+// @media (max-width: 985px) {
+// 	#contact {
+// 	  // transform: translateX(-100vw);
+// 	  left: 4.15rem;
+// 	  // top: 0;
+// 	  // margin-top: 2rem;
+// 	  // height: auto;
+// 	  width: calc(100vw - 4.15rem);
+// 	  // position: absolute;
+// 	  // transform: translateX(100vw) translateY(-50%);
+// 	}
+
+// 	@keyframes showContact {
+// 	  0% {
+// 	    transform: translateX(-100vw) translateY(-50%);
+// 	  }
+// 	  30% {
+// 	    transform: translateX(10vw) translateY(-50%);
+// 	  }
+// 	  50% {
+// 	    transform: translateX(-5vw) translateY(-50%);
+// 	  }
+// 	  100% {
+// 	    transform: translateX(0) translateY(-50%);
+// 	  }
+// 	}
+
+// 	@keyframes hideContact {
+// 	  0% {
+// 	    transform: translateX(0) translateY(-50%);
+// 	  }
+// 	  30% {
+// 	    transform: translateX(-110vw) translateY(-50%);
+// 	  }
+// 	  100% {
+// 	    transform: translateX(-100vw) translateY(-50%);
+// 	  }
+// 	}
+//       }
+
+//       @media (max-width: 375px) {
+// 	#contact {
+// 	  left: 3.025rem;
+// 	  width: calc(100vw - 3.025rem);
+// 	}
+// 	h2 {
+// 	  font-size: 2rem !important;
+// 	}
+//       }

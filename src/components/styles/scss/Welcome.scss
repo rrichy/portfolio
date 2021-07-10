@@ -75,29 +75,3 @@
     transform: translateY(3%);
   }
 }
-
-@media (max-width: 985px) {
-  #greet {
-    .greet {
-      font-size: 13rem;
-      transform: translateY(-5%);
-    }
-
-    text {
-      font-size: 2.5rem;
-    }
-  }
-}
-
-@media (max-width: 375px) {
-  #greet {
-    .greet {
-      font-size: 16rem;
-      transform: translateY(-5%);
-    }
-
-    text {
-      font-size: 3.5rem;
-    }
-  }
-}

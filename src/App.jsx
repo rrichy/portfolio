@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { Component } from "react";
 
 import Welcome from "./components/Welcome";
 import Navigation from "./components/Navigation";
@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import "./App.css";
+import Footer from "./components/Footer";
 
 class App extends Component {
   state = {
@@ -38,6 +39,10 @@ class App extends Component {
         {currentPage !== "welcome" && (
           <Navigation switchPage={this.switchPage} page={currentPage} />
         )}
+        <Footer
+          onProjects={currentPage === "projects"}
+          showIcon={currentPage !== "welcome"}
+        />
         {currentPage === "home" && <Home />}
         {currentPage === "projects" && <Projects />}
         {currentPage === "contact" && <Contact />}

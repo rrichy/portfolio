@@ -1,15 +1,12 @@
 @import "./variables";
+@import "./mixin";
 
 #navigation {
+  background: $bg1;
+  box-shadow: $textColor 0px 5px 5px;
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background: linear-gradient(
-    216deg,
-    $bg1 30%,
-    $textColor 30.1%,
-    transparent 31%
-  );
   color: $textColor;
   z-index: 10;
   pointer-events: none;
@@ -23,138 +20,42 @@
     transition: color 0.2s, transform 0.2s;
     &:hover {
       color: $accent2;
-      // cursor: pointer;
       transform: scale(1.1);
     }
   }
-  animation: showNav 0.7s forwards;
+
+  transform: rotate(26deg) translateY(-93%);
+  animation: initializeNav 0.7s;
+}
+
+.on-projects {
+  transform: rotate(0) translateY(-93%) !important;
+
+  & #nav-wrapper {
+    right: 4.5%;
+  }
+}
+
+.default-nav {
+  transition: all 0.7s;
 }
 
 .active-page {
   color: $accent2 !important;
-  // cursor: pointer;
   transform: scale(1.1);
 }
 
-@keyframes showNav {
+@keyframes initializeNav {
   from {
-    transform: translateX(100vw);
-  }
-  to {
-    transform: translateX(0vw);
+    transform: rotate(26deg) translateY(-193%);
   }
 }
 
 #nav-wrapper {
-  display: flex;
   position: absolute;
-  top: 16%; // calculate this
-  left: 53%; // and this
-  transform: rotate(36deg);
-  pointer-events: all;
-}
-
-#account-wrapper {
+  bottom: 0;
+  right: 28%;
   display: flex;
-  position: absolute;
-  top: 28%; // calculate this
-  left: 75%; // and this
-  transform: rotate(306deg);
   pointer-events: all;
-
-  // .fa-github,
-  // .fa-free-code-camp,
-  // .fa-codepen {
-  //   margin: 0.5rem;
-  //   transition: color 0.2s;
-  //   font-size: 2.6rem;
-  //   &:hover {
-  //     color: $accent2;
-  //     transform: scale(1.1);
-  //     cursor: pointer;
-  //   }
-  // }
-}
-
-@media (max-width: 985px) {
-  #navigation {
-    width: fit-content;
-    padding: 0.2rem;
-    left: 0;
-    background: $accent1;
-  }
-
-  #nav-wrapper {
-    position: relative;
-    left: 0;
-    width: fit-content;
-    text-align: left;
-    padding: 0;
-    h1 {
-      text-orientation: sideways;
-      writing-mode: vertical-rl;
-      text-decoration: none;
-
-      margin: 1.4rem 0;
-      font-size: 2.5rem;
-    }
-  }
-
-  #account-wrapper {
-    position: absolute;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    align-items: center;
-    margin-bottom: 2rem;
-
-    .fa-github,
-    .fa-free-code-camp,
-    .fa-codepen {
-      margin: 0.5rem;
-      font-size: 2.5rem;
-      transition: color 0.2s;
-      &:hover {
-        color: $accent2;
-        cursor: pointer;
-      }
-    }
-  }
-
-  .hidden {
-    transform: translateX(-100%);
-  }
-}
-
-@media (max-width: 375px) {
-  #nav-wrapper {
-    position: relative;
-    left: 0;
-    width: fit-content;
-    text-align: left;
-    padding: 0;
-    h1 {
-      text-orientation: sideways;
-      writing-mode: vertical-rl;
-      text-decoration: none;
-
-      margin: 1.4rem 0;
-      font-size: 1.8rem;
-    }
-  }
-
-  #account-wrapper {
-    .fa-github,
-    .fa-free-code-camp,
-    .fa-codepen {
-      margin: 0.5rem;
-      font-size: 2rem;
-      transition: color 0.2s;
-      &:hover {
-        color: $accent2;
-        cursor: pointer;
-      }
-    }
-  }
+  transition: all 0.7s;
 }

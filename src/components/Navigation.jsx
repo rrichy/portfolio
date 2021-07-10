@@ -1,15 +1,19 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faFreeCodeCamp,
-  faCodepen,
-} from "@fortawesome/free-brands-svg-icons";
+import { useState, useEffect } from "react";
 
 import "./styles/css/Navigation.css";
 
 const Navigation = ({ page, switchPage }) => {
+  const [onInitial, animating] = useState(true);
+
+  useEffect(() => setTimeout(() => animating(false), 700));
   return (
-    <nav id="navigation" className="show-nav">
+    <nav
+      id="navigation"
+      className={
+        (onInitial ? "" : "default-nav") +
+        (page === "projects" ? " on-projects" : "")
+      }
+    >
       <div id="nav-wrapper">
         <a
           href="#"
@@ -31,29 +35,6 @@ const Navigation = ({ page, switchPage }) => {
           onClick={() => switchPage(page, "contact")}
         >
           CONTACT
-        </a>
-      </div>
-      <div id="account-wrapper">
-        <a
-          href="https://github.com/rrichy"
-          target="_blank"
-          referrerPolicy="no-referrer"
-        >
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
-        <a
-          href="https://codepen.io/rrichy"
-          target="_blank"
-          referrerPolicy="no-referrer"
-        >
-          <FontAwesomeIcon icon={faFreeCodeCamp} />
-        </a>
-        <a
-          href="https://www.freecodecamp.org/rrichy"
-          target="_blank"
-          referrerPolicy="no-referrer"
-        >
-          <FontAwesomeIcon icon={faCodepen} />
         </a>
       </div>
     </nav>
