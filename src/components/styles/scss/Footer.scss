@@ -13,35 +13,6 @@ footer {
   transition: all 0.7s;
 }
 
-#account-wrapper {
-  display: flex;
-  pointer-events: all;
-
-  position: absolute;
-
-  a {
-    margin: 0 0.8rem;
-    text-decoration: none;
-    color: $textColor;
-    font-size: 5vh;
-    font-weight: bold;
-    transition: color 0.2s, transform 0.2s;
-    &:hover {
-      color: $accent2;
-      transform: scale(1.1);
-    }
-  }
-  // right: 16.5%;
-  right: 13%;
-  animation: icons 0.7s;
-}
-
-.default-icons {
-  // right: 16.5%;
-  right: 13%;
-  transition: all 0.7s;
-}
-
 .footer-on-projects {
   // transform: rotate(270deg) translateY(141%);
   transform: rotate(270deg) translateY(131%);
