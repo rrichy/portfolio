@@ -39,10 +39,10 @@ class App extends Component {
         {currentPage !== "welcome" && (
           <Navigation switchPage={this.switchPage} page={currentPage} />
         )}
-        <Footer
+        {/* <Footer
           onProjects={currentPage === "projects"}
           showIcon={currentPage !== "welcome"}
-        />
+        /> */}
         {currentPage === "home" && <Home />}
         {currentPage === "projects" && <Projects />}
         {currentPage === "contact" && <Contact />}

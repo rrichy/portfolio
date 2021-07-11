@@ -4,7 +4,8 @@
 #navigation {
   background: $bg1;
   box-shadow: $textColor 0px 5px 5px;
-  height: 100vh;
+  // height: 100vw;
+  padding: 0.5rem;
   width: 100vw;
   position: fixed;
   color: $textColor;
@@ -12,27 +13,36 @@
   pointer-events: none;
 
   a {
-    margin: 0 0.8rem;
+    padding: 0.5rem 0.5rem;
+    // margin: 0 0.8rem;
     text-decoration: none;
     color: $textColor;
-    font-size: 5vh;
+    font-size: $headerFontSize;
+    line-height: $headerFontSize;
     font-weight: bold;
-    transition: color 0.2s, transform 0.2s;
+    // transition: color 0.2s, transform 0.2s;
+    transition: all 0.2s;
     &:hover {
       color: $accent2;
-      transform: scale(1.1);
+      // transform: scale(1.1);
     }
   }
-
-  transform: rotate(26deg) translateY(-93%);
+  top: 0;
+  // transform: rotate(26deg) translateY(-93%);
   animation: initializeNav 0.7s;
 }
 
 .on-projects {
-  transform: rotate(0) translateY(-93%) !important;
+  // transform: rotate(0) translateY(-93%) !important;
 
-  & #nav-wrapper {
-    right: 4.5%;
+  & #nav-container {
+    right: 0%;
+
+    // flex-direction: row;
+    // align-items: flex-end;
+    // & #account-wrapper {
+    //   transform: rotate(0deg) translate(0, 0);
+    // }
   }
 }
 
@@ -41,21 +51,58 @@
 }
 
 .active-page {
-  color: $accent2 !important;
-  transform: scale(1.1);
+  color: $bg2 !important;
+  background: $accent2;
+  border-radius: 0.3em;
+  // transform: scale(1.1);
 }
 
 @keyframes initializeNav {
   from {
-    transform: rotate(26deg) translateY(-193%);
+    top: -100%;
   }
 }
 
+#nav-container {
+  // position: absolute;
+  // bottom: 0;
+  // right: 8%;
+  display: flex;
+  // flex-direction: column-reverse;
+  transition: all 0.7s;
+  align-items: flex-end;
+}
+
+#logo {
+  width: 3rem;
+  margin: 0rem 2.5rem;
+}
+
 #nav-wrapper {
-  position: absolute;
-  bottom: 0;
-  right: 28%;
   display: flex;
   pointer-events: all;
-  transition: all 0.7s;
+  // transition: all 0.7s;
 }
+
+#account-wrapper {
+  display: flex;
+  pointer-events: all;
+  a {
+    // margin: 0 0.8rem;
+    text-decoration: none;
+    color: $textColor;
+    font-size: $headerFontSize;
+    font-weight: bold;
+    transition: color 0.2s, transform 0.2s;
+    &:hover {
+      color: $accent2;
+      transform: scale(1.1);
+    }
+  }
+  // transform: rotate(-90deg) translate(30%, 100%);
+  // animation: icons 0.7s;
+}
+
+// .default-icons {
+//   transition: all 0.7s;
+// }

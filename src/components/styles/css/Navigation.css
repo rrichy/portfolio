@@ -2,43 +2,34 @@
   background: #bb4430;
   -webkit-box-shadow: #231f20 0px 5px 5px;
           box-shadow: #231f20 0px 5px 5px;
-  height: 100vh;
+  padding: 0.5rem;
   width: 100vw;
   position: fixed;
   color: #231f20;
   z-index: 10;
   pointer-events: none;
-  -webkit-transform: rotate(26deg) translateY(-93%);
-          transform: rotate(26deg) translateY(-93%);
+  top: 0;
   -webkit-animation: initializeNav 0.7s;
           animation: initializeNav 0.7s;
 }
 
 #navigation a {
-  margin: 0 0.8rem;
+  padding: 0.5rem 0.5rem;
   text-decoration: none;
   color: #231f20;
-  font-size: 5vh;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
   font-weight: bold;
-  -webkit-transition: color 0.2s, -webkit-transform 0.2s;
-  transition: color 0.2s, -webkit-transform 0.2s;
-  transition: color 0.2s, transform 0.2s;
-  transition: color 0.2s, transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 #navigation a:hover {
   color: #588b8b;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
-.on-projects {
-  -webkit-transform: rotate(0) translateY(-93%) !important;
-          transform: rotate(0) translateY(-93%) !important;
-}
-
-.on-projects #nav-wrapper {
-  right: 4.5%;
+.on-projects #nav-container {
+  right: 0%;
 }
 
 .default-nav {
@@ -47,34 +38,67 @@
 }
 
 .active-page {
-  color: #588b8b !important;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  color: #fafafa !important;
+  background: #588b8b;
+  border-radius: 0.3em;
 }
 
 @-webkit-keyframes initializeNav {
   from {
-    -webkit-transform: rotate(26deg) translateY(-193%);
-            transform: rotate(26deg) translateY(-193%);
+    top: -100%;
   }
 }
 
 @keyframes initializeNav {
   from {
-    -webkit-transform: rotate(26deg) translateY(-193%);
-            transform: rotate(26deg) translateY(-193%);
+    top: -100%;
   }
 }
 
+#nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#logo {
+  width: 3rem;
+  margin: 0rem 2.5rem;
+}
+
 #nav-wrapper {
-  position: absolute;
-  bottom: 0;
-  right: 28%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   pointer-events: all;
-  -webkit-transition: all 0.7s;
-  transition: all 0.7s;
+}
+
+#account-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: all;
+}
+
+#account-wrapper a {
+  text-decoration: none;
+  color: #231f20;
+  font-size: 2.5rem;
+  font-weight: bold;
+  -webkit-transition: color 0.2s, -webkit-transform 0.2s;
+  transition: color 0.2s, -webkit-transform 0.2s;
+  transition: color 0.2s, transform 0.2s;
+  transition: color 0.2s, transform 0.2s, -webkit-transform 0.2s;
+}
+
+#account-wrapper a:hover {
+  color: #588b8b;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*# sourceMappingURL=Navigation.css.map */

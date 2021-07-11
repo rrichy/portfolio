@@ -387,9 +387,9 @@
 }
 
 #projects {
-  position: fixed;
-  height: 100vh;
+  position: absolute;
   width: 100vw;
+  top: 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
