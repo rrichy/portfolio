@@ -4,7 +4,8 @@
 @import "./NormalProjects";
 
 #projects {
-  position: absolute;
+  position: fixed;
+  overflow-x: visible;
   // height: 100vh;
   width: 100vw;
   top: 8rem;
@@ -16,11 +17,14 @@
   h1 {
     margin: 0 0 2rem 0;
   }
-}
-
-.show-projects {
   @include show;
 }
+
+// .show-projects {
+//   // position: absolute !important;
+//   transition-property: position;
+//   transition-delay: 2s;
+// }
 
 .hide-projects {
   @include hide;

@@ -21,13 +21,13 @@ const Navigation = ({ page, switchPage }) => {
         (page === "projects" ? " on-projects" : "")
       }
     >
+      <img
+        src={process.env.PUBLIC_URL + "/images/logo.svg"}
+        alt="Logo"
+        id="logo"
+      />
       <div id="nav-container">
         <div id="nav-wrapper">
-          <img
-            src={process.env.PUBLIC_URL + "/images/logo.svg"}
-            alt="Logo"
-            id="logo"
-          />
           <a
             href="#"
             className={page === "home" ? "active-page" : ""}

@@ -1,10 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap");
-@media (max-width: 1921px) {
-  .on-projects #nav-wrapper {
-    right: 4.5%;
+@media (max-width: 1024px) {
+  #projects {
+    position: absolute !important;
   }
-  #nav-wrapper {
-    right: 26%;
+}
+
+@media (max-width: 768px) {
+  #navigation a {
+    font-size: 2rem !important;
+    line-height: 2rem !important;
+  }
+}
+
+@media (max-width: 620px) {
+  #nav-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #nav-container #nav-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 425px) {
+  #projects .highlight-project,
+  #projects .normal-project {
+    height: 100vw !important;
+    width: 100vw !important;
+  }
+  #projects h2 {
+    font-size: 2rem;
   }
 }
 
