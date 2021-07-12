@@ -43,9 +43,11 @@ class App extends Component {
           onProjects={currentPage === "projects"}
           showIcon={currentPage !== "welcome"}
         /> */}
+        {/* <div id="page-container"> */}
         {currentPage === "home" && <Home />}
         {currentPage === "projects" && <Projects />}
         {currentPage === "contact" && <Contact />}
+        {/* </div> */}
       </>
     );
   }

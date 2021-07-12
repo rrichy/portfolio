@@ -1,12 +1,39 @@
-@media (max-width: 1921px) {
-  .on-projects {
-    & #nav-wrapper {
-      right: 4.5%;
+@media (max-width: 1024px) {
+  #projects {
+    position: absolute !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #navigation {
+    a {
+      font-size: $headerFontSize2 !important;
+      line-height: $headerFontSize2 !important;
     }
   }
+}
 
-  #nav-wrapper {
-    right: 26%;
+@media (max-width: 620px) {
+  #nav-container {
+    flex-direction: column;
+
+    #nav-wrapper {
+      flex-direction: column;
+    }
+    //turns to hamburger menu
+  }
+}
+
+@media (max-width: 425px) {
+  #projects {
+    .highlight-project,
+    .normal-project {
+      height: 100vw !important;
+      width: 100vw !important;
+    }
+    h2 {
+      font-size: 2rem;
+    }
   }
 }
 // // media

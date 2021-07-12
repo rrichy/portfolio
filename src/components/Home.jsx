@@ -16,9 +16,6 @@ const Home = () => {
           <span>PORTFOLIO</span>
         </h1>
       </div>
-      <svg className="home-idle">
-        <circle cx="50%" cy="50%" r="250" />
-      </svg>
     </div>
   );
 };

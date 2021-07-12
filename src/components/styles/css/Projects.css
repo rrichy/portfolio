@@ -387,7 +387,8 @@
 }
 
 #projects {
-  position: absolute;
+  position: fixed;
+  overflow-x: visible;
   width: 100vw;
   top: 8rem;
   display: -webkit-box;
@@ -404,15 +405,12 @@
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
+  -webkit-animation: show 2s ease forwards 0.2s;
+          animation: show 2s ease forwards 0.2s;
 }
 
 #projects h1 {
   margin: 0 0 2rem 0;
-}
-
-.show-projects {
-  -webkit-animation: show 2s ease forwards 0.2s;
-          animation: show 2s ease forwards 0.2s;
 }
 
 .hide-projects {
