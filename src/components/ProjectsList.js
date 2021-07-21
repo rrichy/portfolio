@@ -12,9 +12,10 @@ export const highlightProjects = [
     "https://rrichy.github.io/wiki-viewer/",
   ],
   [
-    "Multiplayer Game",
-    "multiplayer-game.png",
-    "https://replit.com/@rrichy/boilerplate-project-secure-real-time-multiplayer-game",
+    "Gathering Hall",
+    "gathering-hall.png",
+    "https://github.com/rrichy/boilerplate-project-secure-real-time-multiplayer-game",
+    "https://gathering-hall.herokuapp.com/",
   ],
 ]; // [Title, imgsrc, srccode, url]
 
