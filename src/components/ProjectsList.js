@@ -1,5 +1,11 @@
 export const highlightProjects = [
   [
+    "Recipe Box",
+    "recipe-box.png",
+    "https://github.com/rrichy/recipe-box-client",
+    "https://recipe-box-by-rrichy.netlify.app/#",
+  ],
+  [
     "Tic Tac Toe",
     "tic-tac-toe.png",
     "https://github.com/rrichy/tic-tac-toe",
